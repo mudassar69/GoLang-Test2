@@ -1,0 +1,138 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Assignment2",
+		"_postman_id": "4378a159-8033-5874-6f97-7b70219db91c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"url": "http://localhost:5000/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"abc@gmail.com\",\n\t\"firstname\": \"abc\",\n\t\"lastname\": \"def\",\n\t\"password\": \"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost:5000/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"testing4@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Task",
+			"request": {
+				"url": "http://localhost:5000/task",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"task7\",\n\t\"description\": \"creating task for user id 9\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tasks",
+			"request": {
+				"url": "http://localhost:5000/task",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"url": "http://localhost:5000/task/7",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"update task\",\n\t\"description\": \"dsdfdfd\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Task",
+			"request": {
+				"url": "http://localhost:5000/api/task/assign",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFeHBpcmVzQXQiOjE2MjQ1NDY2MDMsIklzc3VlZEF0IjoxNjI0NDYwMjAzLCJ1c2VySUQiOjExfQ.1XsiNqnWissCiDGY1_WYl2-Tybzh-w9nZCJgYESTuWw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"mudassar@tintash.com\",\n\t\"task\": {\n\t\t\"title\": \"cxgdg\",\n\t\t\"description\": \"aaddsfdsf\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
